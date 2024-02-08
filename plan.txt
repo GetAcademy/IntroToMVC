@@ -9,3 +9,8 @@
 - Om vi får tid, skal vi lage en liten evalueringsapp, hvor 
   brukeren svarer på tre multiple choice spørsmål, og hvor 
   hvert alternativ gir et antall poeng. 
+
+ - Innebygget i JavaScript
+   - Tall, tilfeldige tall
+   - Tekst
+   - Datoer
