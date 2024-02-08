@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="number">0</h1>
+    <button onclick="oneClick()">Klikk</button>
+    <button onclick="buyUpgrade()">Kjøp oppgradering</button> (koster 10 poeng)
+
+    <script>
+        let pointsPerClick = 1;
+        let h1tag = document.getElementById('number');
+
+        function oneClick() {
+            // hente ut nåværende tall
+            let number = parseInt(h1tag.innerHTML);
+
+            // øke med 1
+            number += pointsPerClick;
+
+            // legge nytt tall tilbake
+            h1tag.innerHTML = number;
+        }
+
+        function buyUpgrade(){
+            let number = parseInt(h1tag.innerHTML);
+
+            if(number >= 10){
+                number -= 10;
+                pointsPerClick++;
+                h1tag.innerHTML = number;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+- Først skal vi se på et enkelt klikker-spill med og uten MVC. 
+
+- Så skal vi se på endring av farger med og uten MVC. 
+
+- Så skal jeg tegne og forklare litt om MVC og noen begreper 
+  rundt dette
+  - separation of concerns
+  - design patterns
+
+- Om vi får tid, skal vi lage en liten evalueringsapp, hvor 
+  brukeren svarer på tre multiple choice spørsmål, og hvor 
+  hvert alternativ gir et antall poeng. 
