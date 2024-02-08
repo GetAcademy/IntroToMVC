@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pause til 13:34</h1>
+    
+    <div id="app"></div>
+
+    <script>
+        // model
+        let red = 127;
+        let green = 127;
+        let blue = 127;
+
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML =/*HTML*/`
+                <div class="box" style="background-color: rgb(${red}, ${green}, ${blue})"></div>
+                Rødt: ${red}  
+                <button onclick="changeColor(5, 0, 0)">+</button>
+                <button onclick="changeColor(-5, 0, 0)">-</button>
+                <br/>
+                Grønt: ${green}
+                <button onclick="changeColor(0, 5, 0)">+</button>
+                <button onclick="changeColor(0, -5, 0)">-</button>
+                <br/>
+                Blått: ${blue}
+                <button onclick="changeColor(0, 0, 5)">+</button>
+                <button onclick="changeColor(0, 0, -5)">-</button>
+                <br/>
+                Annet:
+                <button onclick="changeColor(5,5,5)">Mer av alt</button>
+                <button onclick="changeColor(-5,-5,-5)">Mindre av alt</button>
+            `;
+        }
+
+        // controller
+        function changeColor(changeRed, changeGreen, changeBlue) {
+            red += changeRed;
+            green += changeGreen;
+            blue += changeBlue;
+            updateView();
+        }
+    </script>
+</body>
+
+</html>
