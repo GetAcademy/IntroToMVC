@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Pause til 13:007</h1>
+
+    <div id="app"></div>
+
+    <script>
+        // model
+        let points = 0;
+        let upgradeCount = 1;
+        let upgradePrice = 10;
+
+        // view 
+        updateView();
+        function updateView(){
+            let upgradeButtonDisabled = points >= upgradePrice ? '' : 'disabled';
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <h1 id="number">${points}</h1>
+                <button onclick="oneClick()">Klikk</button>
+                <button ${upgradeButtonDisabled} onclick="buyUpgrade()">Kjøp oppgradering</button>           
+            `;
+        }
+
+        // controller
+        function oneClick() {
+            points += upgradeCount;
+            updateView();
+        }
+
+        function buyUpgrade() {
+            if (points >= upgradePrice) {
+                upgradeCount++;
+                points -= upgradePrice;
+                upgradePrice += 10;
+            }
+            updateView();
+        }
+    </script>
+</body>
+
+</html>

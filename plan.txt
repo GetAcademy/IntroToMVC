@@ -2,8 +2,7 @@
 
 - Så skal vi se på endring av farger med og uten MVC. 
 
-- Så skal jeg tegne og forklare litt om MVC og noen begreper 
-  rundt dette
+- Så skal jeg tegne og forklare litt om MVC og noen begreper rundt dette
   - separation of concerns
   - design patterns
 

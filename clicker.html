@@ -13,27 +13,29 @@
     <button onclick="buyUpgrade()">Kjøp oppgradering</button> (koster 10 poeng)
 
     <script>
-        let pointsPerClick = 1;
-        let h1tag = document.getElementById('number');
+        let upgradeCount = 1;
 
         function oneClick() {
+            let h1tag = document.getElementById('number');
+
             // hente ut nåværende tall
-            let number = parseInt(h1tag.innerHTML);
+            let points = parseInt(h1tag.innerHTML);
 
             // øke med 1
-            number += pointsPerClick;
+            points += upgradeCount;
 
             // legge nytt tall tilbake
-            h1tag.innerHTML = number;
+            h1tag.innerHTML = points;
         }
 
-        function buyUpgrade(){
-            let number = parseInt(h1tag.innerHTML);
+        function buyUpgrade() {
+            let h1tag = document.getElementById('number');
+            let points = parseInt(h1tag.innerHTML);
 
-            if(number >= 10){
-                number -= 10;
-                pointsPerClick++;
-                h1tag.innerHTML = number;
+            if (points >= 10) {
+                upgradeCount++;
+                points -= 10;
+                h1tag.innerHTML = points;
             }
         }
     </script>
